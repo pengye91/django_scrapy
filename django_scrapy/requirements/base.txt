@@ -1,0 +1,6 @@
+#base.txt
+django==1.9.5
+Scrapy==1.0.5
+mongoengine==0.10.6
+djangorestframework==3.3.3
+python-social-auth==0.2.16
