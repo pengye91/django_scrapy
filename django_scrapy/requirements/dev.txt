@@ -5,3 +5,6 @@ django-debug-toolbar
 selenium
 gunicorn
 supervisor
+
+-e git+https://github.com/toastdriven/django-haystack.git@master#egg=django-haystack
+-e git+https://github.com/jschneier/django-storages.git#egg=django-storages

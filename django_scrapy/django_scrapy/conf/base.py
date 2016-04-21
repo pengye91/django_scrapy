@@ -21,14 +21,6 @@ EXTERNAL_LIBS_PATH = os.path.join(BASE_DIR, "externals", "libs")
 EXTERNAL_APPS_PATH = os.path.join(BASE_DIR, "externals", "apps")
 sys.path = ["", EXTERNAL_LIBS_PATH, EXTERNAL_APPS_PATH] + sys.path
 
-# Project paths
-MEDIA_ROOT = os.path.join(BASE_DIR, "django_scrapy", "media")
-STATIC_ROOT = os.path.join(BASE_DIR, "django_scrapy", "static")
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "django_scrapy", "site_static"), )
-TEMPLATES_DIRS = (os.path.join(BASE_DIR, "django_scrapy", "templates"), )
-LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"), )
-FILE_UPLOAD_TMP_DIR = os.path.join(BASE_DIR, "django_scrapy", "tmp")
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -87,12 +79,12 @@ WSGI_APPLICATION = 'django_scrapy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation
@@ -132,10 +124,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# For local settings
-try:
-    execfile(os.path.join(os.path.dirname(__file__),
-                          "local_settings.py"))
-except IOError:
-    pass
