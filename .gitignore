@@ -112,3 +112,13 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+# .ignore file from the book
+# Project files and directories
+/myproject/local_settings.py
+/myproject/static/
+/myproject/tmp/
+/myproject/media/
+
+# Byte-compiled / optimized / DLL files
+
+
